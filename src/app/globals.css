@@ -1,27 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Add this to your global CSS file */
+input[type="date"], input[type="time"] {
+    max-width: 100%; /* Ensures input fields don't overflow */
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  
+  @media (max-width: 640px) {
+    .date-picker-popup, .time-picker-popup {
+      width: 100vw; /* Adjust to fit within the viewport width */
+      max-width: 100%;
+    }
   }
-}
+  

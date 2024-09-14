@@ -1,11 +1,9 @@
-"use client"
-import { useRouter } from 'next/navigation'
 
-import { Button } from "@/components/ui/button"
+import { redirect } from 'next/navigation'
+
+import { Button } from "../../components/ui/button"
 
 export default function Component() {
-  const router = useRouter(); // Initialize the useRouter hook
-
   return (
     <section className="w-full py-12 md:py-24 lg:py-32  bg-black text-white">
       <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-12">
@@ -19,7 +17,7 @@ export default function Component() {
             your knowledge, connect with like-minded individuals, and have a great time.
           </p>
           <Button
-            onClick={() => router.push('/explore')}
+            onClick={redirect('/explore')}
 className="bg-white text-black rounded-xl font-semibold text-xl hover:bg-slate-200"            
           >
             View Events
